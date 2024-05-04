@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "xThjxpfSFXt+npbyGQtxBqk/0rqtJWgfe00ptkZFpY/LLbr1GQJ4pCdJjKUzOZrEMfN1eXmgQUBkLwGL3jp8ow==",
+  "success": true,
+  "projectFilePath": "G:\\KLTN_sourcecode\\KLTN_ky2_2024\\backend\\KLTN\\MISA.WEB07.HCSN2.DUONG.DL\\KLTN.Datalayer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ADMIN\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\mysqlconnector\\2.1.12\\mysqlconnector.2.1.12.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

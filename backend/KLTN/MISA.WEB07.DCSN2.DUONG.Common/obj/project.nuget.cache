@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "RoGyixcbfCl9jPY616n07+5MHdyJlyYSx+bUmvWoWe/EEzC6s61Wtmj3GuF9mFKWoV+JFVy6kFMLQYDyO2IUFQ==",
+  "success": true,
+  "projectFilePath": "G:\\KLTN_sourcecode\\KLTN_ky2_2024\\backend\\KLTN\\MISA.WEB07.DCSN2.DUONG.Common\\KLTN.Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\ADMIN\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

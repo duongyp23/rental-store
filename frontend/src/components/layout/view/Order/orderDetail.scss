@@ -1,0 +1,60 @@
+.order-detail {
+  display: flex;
+  column-gap: 50px;
+  justify-content: center;
+  margin-top: 20px;
+  .detail-list{ 
+    min-width: 600px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    
+    .order-detail-item{
+      height: 100px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 5px;
+      border-radius: 6px;
+      .product-img {
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          height: 90px;
+          width: 90px;
+      }
+    }
+  }
+  .total-order {
+    min-width: 600px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    background-color: #fff;
+    padding: 10px;
+    .date-row {
+      display: flex;
+      flex-direction: row;
+      column-gap: 20px;
+      .date-input {
+        width: calc(50% - 10px);
+      }
+    }
+    .amount-row{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .user-name{
+      width: 50%;
+    }
+    .phone {
+      width: 50%;
+    }
+    .description {
+      .row-input{
+        height: 100px;
+      }
+    }
+  }
+}

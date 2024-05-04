@@ -1,0 +1,12 @@
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.DCSN2.DUONG.Common\bin\Debug\net6.0\KLTN.Common.deps.json
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.DCSN2.DUONG.Common\bin\Debug\net6.0\KLTN.Common.dll
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.DCSN2.DUONG.Common\bin\Debug\net6.0\KLTN.Common.pdb
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.DCSN2.DUONG.Common\obj\Debug\net6.0\KLTN.Common.csproj.AssemblyReference.cache
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.DCSN2.DUONG.Common\obj\Debug\net6.0\KLTN.Common.GeneratedMSBuildEditorConfig.editorconfig
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.DCSN2.DUONG.Common\obj\Debug\net6.0\KLTN.Common.AssemblyInfoInputs.cache
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.DCSN2.DUONG.Common\obj\Debug\net6.0\KLTN.Common.AssemblyInfo.cs
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.DCSN2.DUONG.Common\obj\Debug\net6.0\KLTN.Common.csproj.CoreCompileInputs.cache
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.DCSN2.DUONG.Common\obj\Debug\net6.0\KLTN.Common.dll
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.DCSN2.DUONG.Common\obj\Debug\net6.0\refint\KLTN.Common.dll
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.DCSN2.DUONG.Common\obj\Debug\net6.0\KLTN.Common.pdb
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.DCSN2.DUONG.Common\obj\Debug\net6.0\ref\KLTN.Common.dll

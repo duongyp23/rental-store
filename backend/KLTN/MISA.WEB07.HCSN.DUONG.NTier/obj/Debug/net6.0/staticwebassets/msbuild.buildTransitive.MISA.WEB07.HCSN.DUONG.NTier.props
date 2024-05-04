@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\MISA.WEB07.HCSN.DUONG.NTier.props" />
+</Project>

@@ -1,0 +1,15 @@
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.DL\bin\Debug\net6.0\KLTN.Datalayer.deps.json
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.DL\bin\Debug\net6.0\KLTN.Datalayer.dll
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.DL\bin\Debug\net6.0\KLTN.Datalayer.pdb
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.DL\bin\Debug\net6.0\KLTN.Common.dll
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.DL\bin\Debug\net6.0\KLTN.Common.pdb
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.DL\obj\Debug\net6.0\KLTN.Datalayer.csproj.AssemblyReference.cache
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.DL\obj\Debug\net6.0\KLTN.Datalayer.GeneratedMSBuildEditorConfig.editorconfig
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.DL\obj\Debug\net6.0\KLTN.Datalayer.AssemblyInfoInputs.cache
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.DL\obj\Debug\net6.0\KLTN.Datalayer.AssemblyInfo.cs
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.DL\obj\Debug\net6.0\KLTN.Datalayer.csproj.CoreCompileInputs.cache
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.DL\obj\Debug\net6.0\KLTN.Datalayer.csproj.CopyComplete
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.DL\obj\Debug\net6.0\KLTN.Datalayer.dll
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.DL\obj\Debug\net6.0\refint\KLTN.Datalayer.dll
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.DL\obj\Debug\net6.0\KLTN.Datalayer.pdb
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.DL\obj\Debug\net6.0\ref\KLTN.Datalayer.dll

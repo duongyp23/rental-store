@@ -1,0 +1,44 @@
+.style-input{
+    display: flex;
+    flex-direction: column;
+    .input-label {
+        font-size: 16px;
+    }
+    .row-input{
+        margin-top: 4px;
+        height: 36px;
+        border: 1px solid #afafaf;
+        outline: none;
+        border-radius: 4px;
+        font-size: 13px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &:hover:not(.disabled) {
+            border: 1px solid rgba(26, 164, 200);
+        }
+        &:focus-within {
+            border: 1px solid rgba(26, 164, 200);
+        }
+        .input-box {
+            margin-left: 8px;
+            height: 100%;
+            border: none;
+            background-color: transparent;
+            font-family: "Roboto",sans-serif;
+        }
+        .icon-input{
+            margin-left: 8px;
+            width: 24px;
+            height: 24px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        &.disabled {
+            background-color: lightgrey;
+        }
+    }
+}

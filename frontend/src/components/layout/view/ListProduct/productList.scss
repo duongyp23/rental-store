@@ -1,0 +1,35 @@
+.product-list {
+    display: flex;
+    flex-direction: column;
+    column-gap: 8px;
+    .list-item {
+        margin-top: 32px;
+        padding-left: 16px;
+        display: flex;
+        flex-direction: row;
+        column-gap: 15px;
+        flex-wrap: wrap;
+        row-gap: 16px;
+    }
+    .paging {
+        height: 32px;
+        display: flex;
+        justify-content: center;
+    }
+}
+.dictionary-page {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    height: 100%;
+    .left-page{
+        padding-right: 5px;
+        min-width: 250px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+    }
+    .right-page {
+        width: 85%;
+    }
+}

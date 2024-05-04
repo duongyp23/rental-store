@@ -1,0 +1,58 @@
+.popup-payment {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.2);
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+    font-size: 13px;
+    .popup {
+    margin: auto;
+    height: auto;
+    width: auto;
+    background-color: #fff;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 3.5px;
+    padding: 10px 20px;
+    .title {
+        font-size: 24px;
+        font-weight: 700;
+    }
+}
+.infomation {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    height: auto;
+}
+.popup-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+.popup-btn {
+    height: 36px;
+    text-align: center;
+    border-radius: 4px;
+    
+    margin-left: 10px;
+}
+.qrcode {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    .img {
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+}
+
+
+}

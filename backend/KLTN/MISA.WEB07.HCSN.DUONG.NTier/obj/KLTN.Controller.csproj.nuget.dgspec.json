@@ -1,0 +1,313 @@
+{
+  "format": 1,
+  "restore": {
+    "G:\\KLTN_sourcecode\\KLTN_ky2_2024\\backend\\KLTN\\MISA.WEB07.HCSN.DUONG.NTier\\KLTN.Controller.csproj": {}
+  },
+  "projects": {
+    "G:\\KLTN_sourcecode\\KLTN_ky2_2024\\backend\\KLTN\\MISA.WEB07.DCSN2.DUONG.Common\\KLTN.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\KLTN_sourcecode\\KLTN_ky2_2024\\backend\\KLTN\\MISA.WEB07.DCSN2.DUONG.Common\\KLTN.Common.csproj",
+        "projectName": "KLTN.Common",
+        "projectPath": "G:\\KLTN_sourcecode\\KLTN_ky2_2024\\backend\\KLTN\\MISA.WEB07.DCSN2.DUONG.Common\\KLTN.Common.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "G:\\KLTN_sourcecode\\KLTN_ky2_2024\\backend\\KLTN\\MISA.WEB07.DCSN2.DUONG.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\KLTN_sourcecode\\KLTN_ky2_2024\\backend\\KLTN\\MISA.WEB07.HCSN.DUONG.NTier\\KLTN.Controller.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\KLTN_sourcecode\\KLTN_ky2_2024\\backend\\KLTN\\MISA.WEB07.HCSN.DUONG.NTier\\KLTN.Controller.csproj",
+        "projectName": "KLTN.Controller",
+        "projectPath": "G:\\KLTN_sourcecode\\KLTN_ky2_2024\\backend\\KLTN\\MISA.WEB07.HCSN.DUONG.NTier\\KLTN.Controller.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "G:\\KLTN_sourcecode\\KLTN_ky2_2024\\backend\\KLTN\\MISA.WEB07.HCSN.DUONG.NTier\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "G:\\KLTN_sourcecode\\KLTN_ky2_2024\\backend\\KLTN\\MISA.WEB07.DCSN2.DUONG.Common\\KLTN.Common.csproj": {
+                "projectPath": "G:\\KLTN_sourcecode\\KLTN_ky2_2024\\backend\\KLTN\\MISA.WEB07.DCSN2.DUONG.Common\\KLTN.Common.csproj"
+              },
+              "G:\\KLTN_sourcecode\\KLTN_ky2_2024\\backend\\KLTN\\MISA.WEB07.HCSN2.DUONG.BL\\KLTN.BussinesLayer.csproj": {
+                "projectPath": "G:\\KLTN_sourcecode\\KLTN_ky2_2024\\backend\\KLTN\\MISA.WEB07.HCSN2.DUONG.BL\\KLTN.BussinesLayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            },
+            "Swashbuckle.AspNetCore.Annotations": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\KLTN_sourcecode\\KLTN_ky2_2024\\backend\\KLTN\\MISA.WEB07.HCSN2.DUONG.BL\\KLTN.BussinesLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\KLTN_sourcecode\\KLTN_ky2_2024\\backend\\KLTN\\MISA.WEB07.HCSN2.DUONG.BL\\KLTN.BussinesLayer.csproj",
+        "projectName": "KLTN.BussinesLayer",
+        "projectPath": "G:\\KLTN_sourcecode\\KLTN_ky2_2024\\backend\\KLTN\\MISA.WEB07.HCSN2.DUONG.BL\\KLTN.BussinesLayer.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "G:\\KLTN_sourcecode\\KLTN_ky2_2024\\backend\\KLTN\\MISA.WEB07.HCSN2.DUONG.BL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "G:\\KLTN_sourcecode\\KLTN_ky2_2024\\backend\\KLTN\\MISA.WEB07.DCSN2.DUONG.Common\\KLTN.Common.csproj": {
+                "projectPath": "G:\\KLTN_sourcecode\\KLTN_ky2_2024\\backend\\KLTN\\MISA.WEB07.DCSN2.DUONG.Common\\KLTN.Common.csproj"
+              },
+              "G:\\KLTN_sourcecode\\KLTN_ky2_2024\\backend\\KLTN\\MISA.WEB07.HCSN2.DUONG.DL\\KLTN.Datalayer.csproj": {
+                "projectPath": "G:\\KLTN_sourcecode\\KLTN_ky2_2024\\backend\\KLTN\\MISA.WEB07.HCSN2.DUONG.DL\\KLTN.Datalayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNet.WebPages": {
+              "target": "Package",
+              "version": "[3.3.0, )"
+            },
+            "Microsoft.Bot.Builder.Integration.AspNet.Core": {
+              "target": "Package",
+              "version": "[4.22.2, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.VisualBasic": {
+              "target": "Package",
+              "version": "[10.3.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Portable.BouncyCastle": {
+              "target": "Package",
+              "version": "[1.9.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.23.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\KLTN_sourcecode\\KLTN_ky2_2024\\backend\\KLTN\\MISA.WEB07.HCSN2.DUONG.DL\\KLTN.Datalayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\KLTN_sourcecode\\KLTN_ky2_2024\\backend\\KLTN\\MISA.WEB07.HCSN2.DUONG.DL\\KLTN.Datalayer.csproj",
+        "projectName": "KLTN.Datalayer",
+        "projectPath": "G:\\KLTN_sourcecode\\KLTN_ky2_2024\\backend\\KLTN\\MISA.WEB07.HCSN2.DUONG.DL\\KLTN.Datalayer.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "G:\\KLTN_sourcecode\\KLTN_ky2_2024\\backend\\KLTN\\MISA.WEB07.HCSN2.DUONG.DL\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "G:\\KLTN_sourcecode\\KLTN_ky2_2024\\backend\\KLTN\\MISA.WEB07.DCSN2.DUONG.Common\\KLTN.Common.csproj": {
+                "projectPath": "G:\\KLTN_sourcecode\\KLTN_ky2_2024\\backend\\KLTN\\MISA.WEB07.DCSN2.DUONG.Common\\KLTN.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.1.12, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

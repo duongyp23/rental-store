@@ -1,0 +1,36 @@
+.style-product{
+    display: flex;
+    flex-direction: column;
+    column-gap: 10px;
+    width: 200px;
+    padding: 6px;
+    .product-img {
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        height: 200px;
+    }
+    .product-info {
+        .product-name {
+            font-size: 16px;
+            font-weight: 700;
+        }
+        .product-price{
+            display: flex;
+            flex-direction: row;
+            .title {
+                width: 100px;
+            }
+            .amount {
+                color: red;
+                font-weight: 700;
+            }
+        }
+    }
+    &:hover {
+        scale: 1.1;
+        border: 1px solid hsl(0, 0%, 69%);
+    border-radius: 6px;
+    padding: 5px;
+    }
+}
