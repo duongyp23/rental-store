@@ -1,0 +1,17 @@
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.BL\bin\Release\net6.0\KLTN.BussinesLayer.deps.json
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.BL\bin\Release\net6.0\KLTN.BussinesLayer.dll
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.BL\bin\Release\net6.0\KLTN.BussinesLayer.pdb
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.BL\bin\Release\net6.0\KLTN.Common.dll
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.BL\bin\Release\net6.0\KLTN.Datalayer.dll
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.BL\bin\Release\net6.0\KLTN.Common.pdb
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.BL\bin\Release\net6.0\KLTN.Datalayer.pdb
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.BL\obj\Release\net6.0\KLTN.BussinesLayer.csproj.AssemblyReference.cache
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.BL\obj\Release\net6.0\KLTN.BussinesLayer.GeneratedMSBuildEditorConfig.editorconfig
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.BL\obj\Release\net6.0\KLTN.BussinesLayer.AssemblyInfoInputs.cache
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.BL\obj\Release\net6.0\KLTN.BussinesLayer.AssemblyInfo.cs
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.BL\obj\Release\net6.0\KLTN.BussinesLayer.csproj.CoreCompileInputs.cache
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.BL\obj\Release\net6.0\KLTN.BussinesLayer.csproj.CopyComplete
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.BL\obj\Release\net6.0\KLTN.BussinesLayer.dll
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.BL\obj\Release\net6.0\refint\KLTN.BussinesLayer.dll
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.BL\obj\Release\net6.0\KLTN.BussinesLayer.pdb
+G:\KLTN_sourcecode\KLTN_ky2_2024\backend\KLTN\MISA.WEB07.HCSN2.DUONG.BL\obj\Release\net6.0\ref\KLTN.BussinesLayer.dll
