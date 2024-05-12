@@ -7,7 +7,7 @@ import Cookies from "js-cookie";
 const request = () => {
     return axios.create(
         {
-            baseURL: 'http://localhost:60708/api/v1/Categorys',
+            baseURL: 'http://localhost:60708/api/Categorys',
             timeout: 5000,
             headers: {
                 Authorization: "Bearer " + Cookies.get('token')

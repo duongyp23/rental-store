@@ -72,10 +72,10 @@ tfoot tr {
 }
 tbody {
     position: relative;
+    overflow: auto;
     display:block;
     height: 100%;
 }
-
 
 /* Tạo scroll */
 tbody::-webkit-scrollbar-track

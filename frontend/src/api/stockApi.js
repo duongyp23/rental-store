@@ -7,7 +7,7 @@ import Cookies from "js-cookie";
 const request = () => {
     return axios.create(
         {
-            baseURL: 'http://localhost:60708/api/v1/Stocks',
+            baseURL: 'http://localhost:60708/api/Stocks',
             timeout: 5000,
             headers: {
                 Authorization: "Bearer " + Cookies.get('token')

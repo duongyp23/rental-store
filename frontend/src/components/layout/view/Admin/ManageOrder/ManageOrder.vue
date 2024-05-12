@@ -2,12 +2,6 @@
   <div class="manage-order">
     <div class="flex-row between">
       <div class="list-header mt-1 mb-2">Danh sách đơn hàng</div>
-      <div class="flex-end">
-        <button class="form-btn btn3" @click="openFormAdd">Nhập kho</button>
-        <button class="form-btn btn3 ml-1" @click="openFormAdd">
-          Xuất kho
-        </button>
-      </div>
     </div>
     <table class="table">
       <thead>

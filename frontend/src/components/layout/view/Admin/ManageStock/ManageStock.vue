@@ -12,30 +12,28 @@
     <table class="table mt-1">
       <thead>
         <tr>
-          <th class="left w-20">Mã sản phẩm</th>
-          <th class="left w-20">Tên sản phẩm</th>
-          <th class="right w-15">Tổng số lượng</th>
-          <th class="right w-15">SL đang thuê</th>
-          <th class="right w-15">SL đã bán</th>
-          <th class="right w-15">SL còn lại</th>
+          <th class="left w-15">Loại chứng từ</th>
+          <th class="left w-15">Người thực hiện</th>
+          <th class="center w-15">Đơn giá</th>
+          <th class="left">Diễn giải</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="item in listData" :key="item.order_id">
-          <td class="left w-20">{{ item.product_code }}</td>
-          <td class="left w-20">{{ item.product_name }}</td>
-          <td class="right w-15">{{ replaceNumber(item.total_quantity) }}</td>
-          <td class="right w-15">{{ replaceNumber(item.quantity_rental) }}</td>
-          <td class="right w-15">{{ replaceNumber(item.quantity_sold) }}</td>
-          <td class="right w-15">{{ replaceNumber(item.quantity_remain) }}</td>
+          <td class="left w-15">{{ getOrderTypeName(item.order_type) }}</td>
+          <td class="left w-15">{{ item.user_name }}</td>
+          <td class="center w-15">
+            {{ replaceNumber(item.total_order_payment) }}
+          </td>
+          <td class="left">{{ item.description }}</td>
         </tr>
       </tbody>
     </table>
   </div>
 </template>
 <script>
-import { apiGetPagingProduct } from "@/api/productApi";
-import { replaceNumber } from "@/method/methodFormat";
+import { apiGetPagingOrder } from "@/api/orderApi";
+import { replaceNumber, getOrderTypeName } from "@/method/methodFormat";
 export default {
   data() {
     return {
@@ -46,13 +44,17 @@ export default {
   components: {},
   methods: {
     replaceNumber,
+    getOrderTypeName,
     async getPagingData() {
       let filter = [];
-      await apiGetPagingProduct(filter, 20, this.pageNumber).then(
-        (response) => {
-          this.listData = response.data.data;
-        }
-      );
+      filter.push({
+        columnName: "order_type",
+        filterValue: 1,
+        operatorValue: "!=",
+      });
+      await apiGetPagingOrder(filter, 20, this.pageNumber).then((response) => {
+        this.listData = response.data.data;
+      });
     },
     openFormAdd(orderType) {
       this.$router.push({

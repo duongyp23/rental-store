@@ -6,7 +6,7 @@ import axios from "axios";
 const request = () => {
     return axios.create(
         {
-            baseURL: 'http://localhost:60708/api/v1/Products',
+            baseURL: 'http://localhost:60708/api/Products',
             timeout: 5000,
             headers: {
                 Authorization: "Bearer "
