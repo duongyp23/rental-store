@@ -22,7 +22,7 @@ import Resource from "@/resource/MsResource";
 import { apiGetPagingProduct } from "@/api/productApi";
 import StyleProduct from "@/components/base/StyleProduct/StyleProduct.vue";
 import ProductTool from "./ProductTool.vue";
-import CategoryTable from "../ListCategory/CategoryTable.vue";
+import CategoryTable from "../../Share/ListCategory/CategoryTable.vue";
 
 export default {
   setup() {},

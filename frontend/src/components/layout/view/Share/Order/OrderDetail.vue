@@ -152,7 +152,7 @@
   </div>
 </template>
 <script>
-import StyleInput from "../../../base/StyleInput/StyleInput.vue";
+import StyleInput from "@/components/base/StyleInput/StyleInput.vue";
 import Images from "@/assets/icon/images";
 import { apiDeleteOrderDetail } from "@/api/orderDetailApi";
 import { replaceNumber, datetimeToDate } from "@/method/methodFormat";

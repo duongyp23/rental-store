@@ -6,7 +6,7 @@
 </template>
 <script>
 import ProductList from "../ListProduct/ProductList.vue";
-import CategoryTable from "../ListCategory/CategoryTable.vue";
+import CategoryTable from "../../Share/ListCategory/CategoryTable.vue";
 export default {
   data() {
     return {};
