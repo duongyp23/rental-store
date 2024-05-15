@@ -55,7 +55,7 @@ import {
   apiUpdateCategory,
   apiDeleteCategory,
 } from "@/api/categoryApi";
-import MsCombobox from "@/components/base/MsCombobox.vue";
+import MsCombobox from "@/components/base/ComboboxSelect.vue";
 import CategoryType from "@/resource/CategoryType";
 import StyleInput from "@/components/base/StyleInput/StyleInput.vue";
 

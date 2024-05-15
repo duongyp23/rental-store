@@ -17,8 +17,8 @@
 
 <script>
 import PageHeader from "./components/layout/PageHeader.vue";
-import MsToastMessage from "./components/base/MsToastMessage.vue";
-import MsPopup from "@/components/base/MsPopup.vue";
+import MsToastMessage from "./components/base/ToastMessage.vue";
+import MsPopup from "@/components/base/PopupMessage.vue";
 import LeftMenuVue from "./components/layout/view/Admin/LeftMenu/LeftMenu.vue";
 
 export default {
