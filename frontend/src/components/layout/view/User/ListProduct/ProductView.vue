@@ -1,17 +1,17 @@
 <template>
   <div class="product-view" @keyup.esc="closeForm()">
-    <div class="title-header mb-1">{{ product.product_name }}</div>
     <div class="form-center mb-1">
       <div class="img-upload">
         <div
-          class="big-img"
+          class="big-img mb-1"
           :style="
             product_image_url
               ? 'background-image: url(' + product_image_url + ')'
               : 'border : 2px solid #afafaf'
           "
         ></div>
-        <div class="list-small-img">
+        <hr class="w-100" />
+        <div class="list-small-img mt-1">
           <div
             class="small-img"
             v-for="(item, index) in list_img_url"
@@ -22,80 +22,78 @@
         </div>
       </div>
 
-      <div class="information">
-        <div class="row-info">
-          <div class="title">Mã sản phẩm</div>
-          <div class="product-code">{{ product.product_code }}</div>
+      <div class="information flex-column">
+        <div class="header-label">{{ product.product_name }}</div>
+        <div>Mã sản phẩm: {{ product.product_code }}</div>
+        <div class="deposit-amount blue">
+          {{ replaceNumber(product.product_price) }} VNĐ
         </div>
         <div class="row-info">
-          <div class="title">Giá sản phẩm</div>
-          <div class="amount2">
-            {{ replaceNumber(product.product_price) }}
-          </div>
+          <div class="title">Giá thuê theo ngày:</div>
+
+          <span class="bold green"
+            >{{ replaceNumber(product.rental_price_day) }} VNĐ
+          </span>
         </div>
         <div class="row-info">
-          <div class="title">Giá thuê theo ngày</div>
-          <div class="amount1">
-            {{ replaceNumber(product.rental_price_day) }}
-          </div>
+          <div class="title">Giá thuê theo tuần:</div>
+          <span class="bold green">
+            {{ replaceNumber(product.rental_price_week) }} VNĐ
+          </span>
         </div>
         <div class="row-info">
-          <div class="title">Giá thuê theo tuần</div>
-          <div class="amount1">
-            {{ replaceNumber(product.rental_price_week) }}
-          </div>
+          <div class="title">Giá thuê theo tháng:</div>
+          <span class="bold green">
+            {{ replaceNumber(product.rental_price_month) }} VND
+          </span>
         </div>
-        <div class="row-info">
-          <div class="title">Giá thuê theo tháng</div>
-          <div class="amount1">
-            {{ replaceNumber(product.rental_price_month) }}
-          </div>
-        </div>
-        <div class="row-info"><div class="title">Mô tả sản phẩm:</div></div>
-        <div class="row-info">{{ product.description }}</div>
-        <div class="flex-row wrap ml-2 mt-2">
-          <label
-            class="tag"
-            v-for="item in selectCategory"
-            :key="item.category_id"
-          >
-            #{{ item.category_code }}
-          </label>
-        </div>
-        <div class="flex-row wrap ml-2">
+        <div class="bold">Lựa chọn:</div>
+        <div class="flex-row wrap">
           <div
             class="option"
-            :class="{ selected: selectOption == item.option_code }"
+            :class="{ selected: selectOption == item }"
             v-for="item in stocks"
             :key="item.stock_id"
-            @click="selectOption = item.option_code"
+            @click="
+              selectOption == item ? (selectOption = {}) : (selectOption = item)
+            "
           >
             {{ item.option_code }}
           </div>
         </div>
-        <InputNumber
-          class="ml-2 mr-2 mt-1"
-          :label="'Số lượng thuê'"
-          v-model:numberValue="numberRental"
-        ></InputNumber>
-        <div class="action">
+        <div v-if="selectOption.option_code">
+          <span class="green bold">{{ selectOption.quantity_remain }}</span> sản
+          phẩm có sẵn
+        </div>
+        <div class="flex-row">
+          <InputNumber
+            class="quantity-order"
+            :label="'Số lượng thuê:'"
+            v-model:numberValue="numberRental"
+          ></InputNumber>
           <button class="btn-add-cart" @click="addToCart">
             Thêm vào giỏ hàng
           </button>
         </div>
-        <div class="row-info"><div class="title">Bình luận</div></div>
-        <div></div>
+
+        <StyleInput
+          class="description mt-1"
+          :label="'Mô tả sản phẩm'"
+          v-model:value="product.description"
+          type="textarea"
+          :disabled="true"
+        ></StyleInput>
       </div>
     </div>
   </div>
 </template>
 <script>
 import Images from "@/assets/icon/images";
-import { apiGetCategoryOfProduct } from "@/api/categoryApi";
 import { apiAddProductToCart, apiGetProduct } from "@/api/productApi";
 import { replaceNumber } from "@/method/methodFormat";
 import { apiGetAllStock } from "@/api/stockApi";
 import InputNumber from "@/components/base/StyleInput/InputNumber.vue";
+import StyleInput from "@/components/base/StyleInput/StyleInput.vue";
 export default {
   data() {
     return {
@@ -107,20 +105,20 @@ export default {
       selectCategory: [],
       product_image_url: "",
       stocks: [],
-      selectOption: "",
+      selectOption: {},
       numberRental: 0,
     };
   },
-  components: { InputNumber },
+  components: { InputNumber, StyleInput },
   methods: {
     replaceNumber,
     async addToCart() {
       if (this.$cookies.get("token")) {
-        if (this.selectOption != "" && this.numberRental > 0) {
+        if (this.selectOption != {} && this.numberRental > 0) {
           await apiAddProductToCart(
             this.product.product_id,
             this.$cookies.get("userId"),
-            this.selectOption,
+            this.selectOption.option_code,
             this.numberRental
           )
             .then(() => {
@@ -143,13 +141,6 @@ export default {
     },
     closeForm() {
       this.isOpen = false;
-    },
-    async getDataCategoryOfProduct() {
-      await apiGetCategoryOfProduct(this.product.product_id)
-        .then((response) => {
-          this.selectCategory = response.data;
-        })
-        .catch(() => {});
     },
     async getDataById() {
       await apiGetProduct(this.$route.params.id).then((response) => {

@@ -6,6 +6,7 @@
     <table class="table">
       <thead>
         <tr>
+          <th class="w-5 center">STT</th>
           <th class="w-10">Ngày đặt hàng</th>
           <th class="w-10">Ngày bắt đầu thuê</th>
           <th class="w-10">Ngày kết thúc thuê</th>
@@ -16,18 +17,26 @@
       </thead>
       <tbody>
         <tr
-          v-for="item in listOrder"
+          v-for="(item, index) in listOrder"
           :key="item.order_id"
           @dblclick="viewOrder(item)"
         >
+          <td class="w-5 center">{{ index + 1 }}</td>
           <td class="w-10">{{ datetimeToDate(item.order_date) }}</td>
           <td class="w-10">{{ datetimeToDate(item.from_date) }}</td>
           <td class="w-10">{{ datetimeToDate(item.to_date) }}</td>
-          <td class="right w-15">
+          <td class="right w-15 bold">
             {{ replaceNumber(item.total_order_deposit) }}
           </td>
-          <td class="w-15">
-            {{ item.order_type == 1 ? checkStatusOrder(item.status) : "" }}
+          <td
+            class="w-15 bold"
+            :class="{
+              green: item.status == 5,
+              blue: item.status == 4,
+              yellow: item.status == 3,
+            }"
+          >
+            {{ checkStatusOrder(item.status) }}
           </td>
           <td class="left">{{ item.description }}</td>
         </tr>

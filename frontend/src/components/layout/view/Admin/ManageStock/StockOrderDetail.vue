@@ -1,8 +1,10 @@
 <template>
   <div class="stock-order-detail flex-column">
-    <div class="title">{{ orderType == 2 ? "Nhập kho" : "Xuất kho" }}</div>
-    <div class="flex-row">
-      <div class="detail-list flex1 flex-column">
+    <div class="header-label">
+      {{ orderType == 2 ? "Nhập kho" : "Xuất kho" }}
+    </div>
+    <div class="flex-row mid-view">
+      <div class="detail-list flex-column">
         <div class="box-search mb-1">
           <StyleInput
             :rightIcon="'search'"
@@ -34,7 +36,7 @@
             "
           ></div>
           <div class="flex-column">
-            <div>{{ orderDetail.product_name }}</div>
+            <div class="bold">{{ orderDetail.product_name }}</div>
             <div class="flex-row">
               <StyleInput
                 v-model:value="orderDetail.option_code"
@@ -60,7 +62,9 @@
           </div>
         </div>
       </div>
-      <div class="total-order flex1 flex-column">
+      <div class="total-order flex-column">
+        <div class="header-label center">Thông tin phiếu</div>
+        <hr class="w-100" />
         <div class="amount-row">
           <div>Giá trị đơn hàng</div>
           <div v-if="order.order_type == 2">

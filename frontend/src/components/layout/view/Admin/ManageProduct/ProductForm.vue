@@ -3,7 +3,7 @@
     <div class="header-label">{{ label }}</div>
     <div class="middle-view mt-2">
       <div class="top flex-row">
-        <div class="img-upload">
+        <div class="img-upload flex1">
           <div
             class="big-img"
             :style="
@@ -35,7 +35,7 @@
           </div>
         </div>
 
-        <div class="information">
+        <div class="information flex1">
           <div class="row-flex">
             <StyleInput
               :label="'Mã sản phẩm'"
@@ -47,31 +47,6 @@
               v-model:value="product.product_name"
             ></StyleInput>
           </div>
-
-          <!-- <div class="row-flex mt-1">
-            <InputNumber
-              :label="'Số lượng sản phẩm'"
-              v-model:numberValue="product.total_quantity"
-              :disabled="true"
-            ></InputNumber>
-            <InputNumber
-              :label="'Số lượng sản phẩm trong kho'"
-              v-model:numberValue="product.quantity_remain"
-              :disabled="true"
-            ></InputNumber>
-          </div>
-          <div class="row-flex mt-1">
-            <InputNumber
-              :label="'Số lượng sản phẩm đã bán'"
-              v-model:numberValue="product.quantity_sold"
-              :disabled="true"
-            ></InputNumber>
-            <InputNumber
-              :label="'Số lượng sản phẩm đang thuê'"
-              v-model:numberValue="product.quantity_rental"
-              :disabled="true"
-            ></InputNumber>
-          </div> -->
           <div class="row-flex mt-1">
             <InputNumber
               :label="'Giá sản phẩm (đ)'"
@@ -134,7 +109,7 @@ import Images from "@/assets/icon/images";
 import { apiGetCategoryOfProduct } from "@/api/categoryApi";
 import CategoryType from "@/resource/CategoryType";
 import { datetimeToDate } from "@/method/methodFormat";
-import CategoryTable from "../../ListCategory/CategoryTable.vue";
+import CategoryTable from "@/components/layout/view/Share/ListCategory/CategoryTable.vue";
 import { apiGetProduct } from "@/api/productApi";
 
 /**

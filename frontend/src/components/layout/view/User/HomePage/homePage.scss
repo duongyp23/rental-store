@@ -1,16 +1,19 @@
 .homepage {
-    display: flex;
-    flex-direction: column;
+    width: 1400px;
+    margin: auto;
     .banner {
         display: flex;
         justify-content: center;
+        background-color: #fff;
+        padding: 20px;
         .img-banner {
-            width: 80%;
+            width: 100%;
         }
     }
     .group {
         display: flex;
         flex-direction: column;
+        background-color: #fff;
         .title {
             text-align: center;
         }

@@ -9,22 +9,28 @@
       <table class="table">
         <thead>
           <tr>
+            <th class="center w-5">STT</th>
             <th class="left w-15">Mã sản phẩm</th>
-            <th class="left w-15">Tên sản phẩm</th>
-            <th class="right w-15">Giá sản phẩm</th>
-            <th class="left">Diễn giải</th>
+            <th class="left w-20">Tên sản phẩm</th>
+            <td class="right w-20">Giá sản phẩm</td>
+            <th class="right w-15">Tồn Kho</th>
+            <th class="right w-15">Đang cho thuê</th>
+            <th class="right w-15">Đã thanh lý</th>
           </tr>
         </thead>
         <tbody>
           <tr
-            v-for="item in listData"
+            v-for="(item, index) in listData"
             :key="item.product_id"
             @dblclick="openFormEdit(item)"
           >
-            <td class="left w-15">{{ item.product_code }}</td>
-            <td class="left w-15">{{ item.product_name }}</td>
-            <td class="right w-15">{{ replaceNumber(item.product_price) }}</td>
-            <td class="left">{{ item.description }}</td>
+            <th class="center w-5">{{ index + 1 }}</th>
+            <td class="left w-15 blue">{{ item.product_code }}</td>
+            <td class="left w-20">{{ item.product_name }}</td>
+            <td class="right w-20">{{ replaceNumber(item.product_price) }}</td>
+            <td class="right w-15">{{ Math.floor(Math.random() * 100) }}</td>
+            <td class="right w-15">{{ Math.floor(Math.random() * 100) }}</td>
+            <td class="right w-15">{{ Math.floor(Math.random() * 100) }}</td>
           </tr>
         </tbody>
       </table>
@@ -34,7 +40,7 @@
 <script>
 import { apiGetPagingProduct } from "@/api/productApi";
 import { replaceNumber } from "@/method/methodFormat";
-import CategoryTable from "../../ListCategory/CategoryTable.vue";
+import CategoryTable from "@/components/layout/view/Share/ListCategory/CategoryTable.vue";
 export default {
   data() {
     return {

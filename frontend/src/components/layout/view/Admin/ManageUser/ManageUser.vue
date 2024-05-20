@@ -4,16 +4,18 @@
     <table class="table">
       <thead>
         <tr>
-          <th>Tên người dùng</th>
-          <th>Số điện thoại</th>
-          <th>Địa chỉ</th>
+          <th class="w-5 center">STT</th>
+          <th class="w-15 left">Tên người dùng</th>
+          <th class="w-15 left">Số điện thoại</th>
+          <th class="left">Địa chỉ</th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="item in listData" :key="item.user_id">
-          <td>{{ item.user_name }}</td>
-          <td>{{ item.phone_number }}</td>
-          <td>{{ item.user_address }}</td>
+        <tr v-for="(item, index) in listData" :key="item.user_id">
+          <th class="w-5 center">{{ index + 1 }}</th>
+          <td class="w-15 left">{{ item.user_name }}</td>
+          <td class="w-15 left">{{ item.phone_number }}</td>
+          <td class="left">{{ item.user_address }}</td>
         </tr>
       </tbody>
     </table>

@@ -1,14 +1,14 @@
 <template>
-  <div class="homepage">
+  <div class="homepage flex-column">
     <div class="banner">
       <img
-        src="https://i.pinimg.com/564x/16/05/fe/1605feca3b5e85f5f70493bb6b7b015a.jpg"
+        src="https://res.cloudinary.com/dmci423da/image/upload/v1716072842/kltn-image/hltntiqbqsrt4twjfust.jpg"
         alt=""
         class="img-banner"
       />
     </div>
     <div class="group">
-      <h2 class="title">Sản phẩm mới về</h2>
+      <h2 class="title">Sản phẩm được thuê nhiều</h2>
       <div class="list-item">
         <StyleProduct
           v-for="item in datalist"

@@ -7,6 +7,7 @@
     <table class="table">
       <thead>
         <tr>
+          <th class="w-5">STT</th>
           <th class="left w-20">Mã nhãn dán</th>
           <th class="left w-20">Loại nhãn dán</th>
           <th class="left">Diễn giải</th>
@@ -14,11 +15,12 @@
       </thead>
       <tbody>
         <tr
-          v-for="item in listData"
+          v-for="(item, index) in listData"
           :key="item.category_id"
           @dblclick="openFormEdit(item)"
         >
-          <td class="left w-20">{{ item.category_code }}</td>
+          <th class="w-5">{{ index + 1 }}</th>
+          <td class="left w-20 blue bold">{{ item.category_code }}</td>
           <td class="left w-20">{{ getCategoryTypeName(item.type) }}</td>
           <td class="left">{{ item.description }}</td>
         </tr>

@@ -7,15 +7,17 @@
         rightIcon="user"
         v-model:value="user.account"
         :label="'Tài khoản'"
-        :placeholder="'Số điện thoại'"
+        :placeholder="'Vui lòng nhập tài khoản của bạn'"
       />
       <StyleInput
+        class="mt-1"
         rightIcon="lock"
         v-model:value="user.password"
         :label="'Mật khẩu'"
-        :placeholder="'Mật khẩu'"
+        :placeholder="'Vui lòng nhập mật khẩu'"
       />
       <button class="login-button" @click="login()">Đăng nhập</button>
+      <div class="center mt-1">Bạn chưa có tài khoản?</div>
       <div class="register">
         <ButtonMenu
           :label="'Đăng ký tài khoản'"

@@ -17,6 +17,7 @@
         @input="$emit('update:value', $event.target.value)"
         @change="$emit('changeValue')"
         :disabled="disabled"
+        :spellcheck="false"
       />
       <textarea
         v-else-if="type == 'textarea'"
@@ -26,6 +27,7 @@
         @input="$emit('update:value', $event.target.value)"
         @change="$emit('changeValue')"
         :disabled="disabled"
+        :spellcheck="false"
       />
       <input
         v-else-if="type == 'date'"

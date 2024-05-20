@@ -1,4 +1,5 @@
 .product-form{
+    
     .header-label {
         font-size: 24px;
         font-weight: 700;
@@ -7,13 +8,18 @@
         display: flex;
         flex-direction: column;
         row-gap: 20px;
+        height: calc(100% - 105px);
+        overflow-y: scroll !important;
+        border-radius: 6px;
         .top{
             column-gap: 20px;
             .img-upload{
-                width: 50%;
-                height: 100%;
+                width: 500px;
+                height: 590px;
                 display: flex;
                 flex-direction: column;
+                background: #fff;
+                padding: 20px;
                 .big-img{
                     height: 480px;
                     background-repeat: no-repeat;
@@ -35,7 +41,7 @@
                     }
                 }
                 .list-small-img {
-                    margin-top: 8px;
+                    margin-top: 10px;
                     height: 100px;
                     display: flex;
                     flex-direction: row;
@@ -65,12 +71,13 @@
                 }
             }
             .information{
-                padding-left: 8px;
-                width: 50%;
-                height: 100%;
+                padding: 20px;
                 display: flex;
                 flex-direction: column;
-                row-gap: 4px;
+                row-gap: 10px;
+                height: 590px;
+                width: 700px;
+                background-color: #fff;
                 .row-flex {
                     .style-input {
                         width: 50% !important;
@@ -78,9 +85,11 @@
                 }
                 .description {
                     .row-input {
-                        height: 200px;
+                        height: 330px;
+                        font-size: 16px;
                         .input-box {
                             padding-top: 12px;
+                            padding-bottom: 12px;
                         }
                     }
                 }
@@ -151,6 +160,18 @@
                 flex: 1;
             }
         }
+        &::-webkit-scrollbar-track
+        {
+            background-color: #F5F5F5;
+        }
+        &::-webkit-scrollbar {
+            width: 3px;
+            background-color: #F5F5F5;
+        }
+        &::-webkit-scrollbar-thumb
+        {
+            background-color: #cdd3d6;
+        }
     }
     .description {
         width: 100%;
@@ -158,5 +179,5 @@
     .title-header {
         font-size: 24px;
     }
-
+    
 }

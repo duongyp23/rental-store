@@ -3,10 +3,11 @@
     margin:auto;
     margin-top: 10vh;
     width: 500px;
-    height: 560px;
     opacity: 1;
     border-radius: 8px;
     align-items: center;
+    padding: 20px;
+    background-color: #fff;
 }
 .user-info{
     display: flex;
@@ -46,7 +47,6 @@
     .register{
         display: flex;
         justify-content: center;
-        margin-top: 8px;
     }
     .logout {
         display: flex;

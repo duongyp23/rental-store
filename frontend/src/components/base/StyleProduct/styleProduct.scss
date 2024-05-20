@@ -2,13 +2,16 @@
     display: flex;
     flex-direction: column;
     column-gap: 10px;
-    width: 200px;
-    padding: 6px;
+    width: 270px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .16);
     .product-img {
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
-        height: 200px;
+        height: 250px;
     }
     .product-info {
         .product-name {

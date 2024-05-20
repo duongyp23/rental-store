@@ -12,18 +12,31 @@
     <table class="table mt-1">
       <thead>
         <tr>
-          <th class="left w-15">Loại chứng từ</th>
+          <th class="w-5 center">STT</th>
+          <th class="left w-10">Loại chứng từ</th>
+          <th class="center w-15">Ngày chứng từ chứng từ</th>
           <th class="left w-15">Người thực hiện</th>
-          <th class="center w-15">Đơn giá</th>
+          <th class="right w-10">Đơn giá</th>
           <th class="left">Diễn giải</th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="item in listData" :key="item.order_id">
-          <td class="left w-15">{{ getOrderTypeName(item.order_type) }}</td>
+        <tr v-for="(item, index) in listData" :key="item.order_id">
+          <th class="w-5 center">{{ index + 1 }}</th>
+          <td class="left w-10 bold blue" v-if="item.order_type == 2">
+            Nhập kho
+          </td>
+          <td class="left w-10 bold red" v-if="item.order_type == 3">
+            Thanh lý
+          </td>
+          <td class="center w-15">{{ datetimeToDate(item.order_date) }}</td>
           <td class="left w-15">{{ item.user_name }}</td>
-          <td class="center w-15">
-            {{ replaceNumber(item.total_order_payment) }}
+          <td class="right w-10">
+            {{
+              item.order_type == 3
+                ? replaceNumber(item.total_order_payment)
+                : replaceNumber(item.total_order_return)
+            }}
           </td>
           <td class="left">{{ item.description }}</td>
         </tr>
@@ -33,7 +46,11 @@
 </template>
 <script>
 import { apiGetPagingOrder } from "@/api/orderApi";
-import { replaceNumber, getOrderTypeName } from "@/method/methodFormat";
+import {
+  replaceNumber,
+  getOrderTypeName,
+  datetimeToDate,
+} from "@/method/methodFormat";
 export default {
   data() {
     return {
@@ -45,6 +62,7 @@ export default {
   methods: {
     replaceNumber,
     getOrderTypeName,
+    datetimeToDate,
     async getPagingData() {
       let filter = [];
       filter.push({

@@ -1,15 +1,21 @@
-.homepage {
-    display: flex;
-    flex-direction: column;
-    .group {
-        display: flex;
-        flex-direction: column;
+.dashboard {
+    .info-group {
+        width: 25px;
+        height: 100px;
+        background-color: #fff;
+        padding: 20px;
+        font-size: 24px;
+    }
+    .chart-group {
+        background-color: #fff;
+        padding: 20px;
         .title {
-            text-align: center;
+            font-size: 24px;
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
-        .list-item {
-            display: flex;
-            flex-wrap:wrap;
+        .chart {
+            height: 500px;
         }
     }
 }

@@ -3,7 +3,6 @@
     <CategoryTable class="left-page" :show-button="true"></CategoryTable>
 
     <div class="product-list right-page">
-      <product-tool class="ml-2 mr-2"></product-tool>
       <div class="list-item mt-1">
         <StyleProduct
           v-for="item in datalist"
@@ -21,7 +20,7 @@ import "@hennge/vue3-pagination/dist/vue3-pagination.css";
 import Resource from "@/resource/MsResource";
 import { apiGetPagingProduct } from "@/api/productApi";
 import StyleProduct from "@/components/base/StyleProduct/StyleProduct.vue";
-import ProductTool from "./ProductTool.vue";
+//import ProductTool from "./ProductTool.vue";
 import CategoryTable from "../../Share/ListCategory/CategoryTable.vue";
 
 export default {
@@ -34,7 +33,7 @@ export default {
       isShowListCategory: true,
     };
   },
-  components: { StyleProduct, ProductTool, CategoryTable },
+  components: { StyleProduct, CategoryTable },
   methods: {
     /**
      * Lấy dữ liệu từ backend
