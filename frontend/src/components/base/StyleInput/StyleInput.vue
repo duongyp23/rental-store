@@ -18,6 +18,7 @@
         @change="$emit('changeValue')"
         :disabled="disabled"
         :spellcheck="false"
+        :maxlength="maxlength"
       />
       <textarea
         v-else-if="type == 'textarea'"
@@ -58,6 +59,7 @@ export default {
     rightIcon: { type: String }, // icon
     id: { default: null, type: String }, // ID
     disabled: { type: Boolean, default: false },
+    maxlength: { type: Int32Array, default: 255 },
   },
 };
 </script>

@@ -1,11 +1,11 @@
 <template>
   <div class="manage-stock">
     <div class="flex-row between">
-      <div class="list-header mt-1 mb-1">Quản lý nhập, xuất kho</div>
+      <div class="list-header mt-1 mb-1">Quản lý nhập kho, thanh lý</div>
       <div class="flex-end">
         <button class="form-btn btn3" @click="openFormAdd(2)">Nhập kho</button>
         <button class="form-btn btn3 ml-1" @click="openFormAdd(3)">
-          Xuất kho
+          Thanh lý
         </button>
       </div>
     </div>
@@ -21,7 +21,11 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(item, index) in listData" :key="item.order_id">
+        <tr
+          v-for="(item, index) in listData"
+          :key="item.order_id"
+          @click="viewStockOrder(item.order_id, item.order_type)"
+        >
           <th class="w-5 center">{{ index + 1 }}</th>
           <td class="left w-10 bold blue" v-if="item.order_type == 2">
             Nhập kho
@@ -78,6 +82,12 @@ export default {
       this.$router.push({
         name: "DetailStock",
         params: { type: orderType, state: 1 },
+      });
+    },
+    viewStockOrder(id, orderType) {
+      this.$router.push({
+        name: "DetailStock",
+        params: { type: orderType, state: 2, id: id },
       });
     },
   },

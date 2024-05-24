@@ -14,36 +14,9 @@
           v-for="item in datalist"
           :key="item.product_id"
           :product="item"
+          @click="viewProduct(item)"
         ></StyleProduct>
       </div>
-    </div>
-    <div class="group">
-      <h2 class="title">Sản phẩm được thuê nhiều</h2>
-      <div class="list-item">
-        <StyleProduct
-          v-for="item in datalist"
-          :key="item.product_id"
-          :product="item"
-        ></StyleProduct>
-      </div>
-    </div>
-    <div class="group">
-      <h2 class="title">Sản phẩm được ưa thích nhất</h2>
-      <div class="list-item">
-        <StyleProduct
-          v-for="item in datalist"
-          :key="item.product_id"
-          :product="item"
-        ></StyleProduct>
-      </div>
-    </div>
-    <div class="group">
-      <h2 class="title">Loại sản phẩm</h2>
-      <div class="list-item"></div>
-    </div>
-    <div class="group">
-      <h2 class="title">Thuê đồ sự kiện</h2>
-      <div class="list-item"></div>
     </div>
   </div>
 </template>
@@ -63,8 +36,14 @@ export default {
      */
     async getProductData() {
       let filter = [];
-      await apiGetPagingProduct(filter, 20, 1).then((response) => {
+      await apiGetPagingProduct(filter, 8, 1, []).then((response) => {
         this.datalist = response.data.data;
+      });
+    },
+    viewProduct(product) {
+      this.$router.replace(this.$router.path);
+      this.$router.push(`/products/${product.product_id}`, {
+        params: { id: product.product_id },
       });
     },
   },

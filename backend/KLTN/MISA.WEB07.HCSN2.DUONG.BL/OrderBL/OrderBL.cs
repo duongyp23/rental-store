@@ -88,7 +88,7 @@ namespace KLTN.BussinesLayer
             string createOrderUrl = "https://sandbox.zalopay.com.vn/v001/tpe/createorder";
 
             var transid = order.order_id.ToString();
-            var embeddata = new { merchantinfo = "embeddata123", redirecturl = "http://localhost:8080/userinfo" };
+            var embeddata = new { merchantinfo = "embeddata123", redirecturl = $"http://localhost:8080/order/{order.order_id.ToString()}" };
             var param = new Dictionary<string, string>();
 
             param.Add("appid", appid);
@@ -184,6 +184,7 @@ namespace KLTN.BussinesLayer
                     {
                         stock.total_quantity = stock.total_quantity - item.quantity;
                         stock.quantity_sold = stock.quantity_sold + item.quantity;
+                        stock.quantity_remain = stock.quantity_remain - item.quantity;
                     }
                     await _stockDL.Update(stock);
                 } else
@@ -202,6 +203,11 @@ namespace KLTN.BussinesLayer
                 }
             }
             return true;
+        }
+
+        public async Task<object> Dashboard()
+        {
+            return await _orderDL.GetDashboardData();
         }
 
         #endregion

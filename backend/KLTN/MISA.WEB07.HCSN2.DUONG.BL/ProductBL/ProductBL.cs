@@ -85,6 +85,11 @@ namespace KLTN.BussinesLayer
             return false;
         }
 
+        public async Task<PagingData<ProductStock>> GetPagingProduct(ParamPaging param, int pageSize, int pageNumber)
+        {
+            return await _productDL.GetPagingProduct(param, pageSize, pageNumber);
+        }
+
         public async Task<Guid> InsertProduct(ProductData data)
         {
             Guid productId = await _productDL.Insert(data.product);

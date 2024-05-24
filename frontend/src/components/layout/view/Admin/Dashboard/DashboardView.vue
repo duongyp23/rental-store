@@ -3,19 +3,19 @@
     <div class="flex-row">
       <div class="flex-column info-group flex1">
         <div class="">Tổng doanh thu:</div>
-        <div class="bold">{{ replaceNumber(232000000) }} VNĐ</div>
+        <div class="bold">{{ replaceNumber(TotalPrice) }} VNĐ</div>
       </div>
       <div class="flex-column info-group flex1">
         <div class="">Lợi nhuận:</div>
-        <div class="bold">{{ replaceNumber(97000000) }} VNĐ</div>
+        <div class="bold">{{ replaceNumber(TotalProfit) }} VNĐ</div>
       </div>
       <div class="flex-column info-group flex1">
         <div class="">Chi phí nhập hàng:</div>
-        <div class="bold">{{ replaceNumber(55000000) }} VNĐ</div>
+        <div class="bold">{{ replaceNumber(TotalInward) }} VNĐ</div>
       </div>
       <div class="flex-column info-group flex1">
         <div class="">Doanh thu thanh lý:</div>
-        <div class="bold">{{ replaceNumber(48000000) }} VNĐ</div>
+        <div class="bold">{{ replaceNumber(TotalOutward) }} VNĐ</div>
       </div>
     </div>
     <div class="flex-row">
@@ -47,12 +47,17 @@
 <script>
 import VueApexCharts from "vue3-apexcharts";
 import { replaceNumber } from "@/method/methodFormat";
+import { apiDashboard } from "@/api/orderApi";
 export default {
   components: { VueApexCharts },
   data() {
     return {
+      TotalPrice: 0,
+      TotalProfit: 0,
+      TotalInward: 0,
+      TotalOutward: 0,
       data1: {
-        series: [55, 97, 48],
+        series: [this.TotalInward, this.TotalPrice, this.TotalOutward],
         chartOptions: {
           chart: {
             type: "donut",
@@ -122,6 +127,22 @@ export default {
   },
   methods: {
     replaceNumber,
+    async getDashboardData() {
+      await apiDashboard().then((response) => {
+        this.TotalPrice = response.data.totalPrice;
+        this.TotalProfit = response.data.totalProfit;
+        this.TotalInward = response.data.totalInward;
+        this.TotalOutward = response.data.totalOutward;
+        this.data1.series = [
+          this.TotalInward,
+          this.TotalPrice,
+          this.TotalOutward,
+        ];
+      });
+    },
+  },
+  created() {
+    this.getDashboardData();
   },
 };
 </script>

@@ -7,9 +7,9 @@
     <table class="table">
       <thead>
         <tr>
-          <th class="w-5">STT</th>
-          <th class="left w-20">Mã nhãn dán</th>
-          <th class="left w-20">Loại nhãn dán</th>
+          <th class="w-5 center">STT</th>
+          <th class="left w-15">Mã nhãn dán</th>
+          <th class="left w-15">Loại nhãn dán</th>
           <th class="left">Diễn giải</th>
         </tr>
       </thead>
@@ -19,9 +19,9 @@
           :key="item.category_id"
           @dblclick="openFormEdit(item)"
         >
-          <th class="w-5">{{ index + 1 }}</th>
-          <td class="left w-20 blue bold">{{ item.category_code }}</td>
-          <td class="left w-20">{{ getCategoryTypeName(item.type) }}</td>
+          <th class="w-5 center">{{ index + 1 }}</th>
+          <td class="left w-15 blue bold">{{ item.category_code }}</td>
+          <td class="left w-15">{{ getCategoryTypeName(item.type) }}</td>
           <td class="left">{{ item.description }}</td>
         </tr>
       </tbody>

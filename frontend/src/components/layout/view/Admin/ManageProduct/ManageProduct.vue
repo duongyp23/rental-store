@@ -5,7 +5,7 @@
       <button class="form-btn btn3" @click="openFormAdd">Thêm sản phẩm</button>
     </div>
     <div class="category-product">
-      <CategoryTable></CategoryTable>
+      <CategoryTable v-model:selectCategory="selectCategory"></CategoryTable>
       <table class="table">
         <thead>
           <tr>
@@ -28,9 +28,13 @@
             <td class="left w-15 blue">{{ item.product_code }}</td>
             <td class="left w-20">{{ item.product_name }}</td>
             <td class="right w-20">{{ replaceNumber(item.product_price) }}</td>
-            <td class="right w-15">{{ Math.floor(Math.random() * 100) }}</td>
-            <td class="right w-15">{{ Math.floor(Math.random() * 100) }}</td>
-            <td class="right w-15">{{ Math.floor(Math.random() * 100) }}</td>
+            <td class="right w-15">
+              {{ replaceNumber(item.quantity_remain) }}
+            </td>
+            <td class="right w-15">
+              {{ replaceNumber(item.quantity_rental) }}
+            </td>
+            <td class="right w-15">{{ replaceNumber(item.quantity_sold) }}</td>
           </tr>
         </tbody>
       </table>
@@ -47,6 +51,7 @@ export default {
       listData: [],
       pagaSize: 20,
       pageNumber: 1,
+      selectCategory: [],
     };
   },
   components: { CategoryTable },
@@ -54,11 +59,15 @@ export default {
     replaceNumber,
     async getPagingData() {
       let filter = [];
-      await apiGetPagingProduct(filter, this.pagaSize, this.pageNumber).then(
-        (response) => {
-          this.listData = response.data.data;
-        }
-      );
+      let ListCategoryId = this.selectCategory.map((x) => x.category_id);
+      await apiGetPagingProduct(
+        filter,
+        this.pagaSize,
+        this.pageNumber,
+        ListCategoryId
+      ).then((response) => {
+        this.listData = response.data.data;
+      });
     },
     openFormEdit(item) {
       this.$router.replace(this.$router.path);
@@ -78,6 +87,14 @@ export default {
     this.emitter.on("reloadProductList", () => {
       this.getPagingData();
     });
+  },
+  watch: {
+    selectCategory: {
+      deep: true,
+      handler: async function () {
+        await this.getPagingData();
+      },
+    },
   },
 };
 </script>

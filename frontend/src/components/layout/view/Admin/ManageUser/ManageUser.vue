@@ -11,7 +11,11 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(item, index) in listData" :key="item.user_id">
+        <tr
+          v-for="(item, index) in listData"
+          :key="item.user_id"
+          @click="viewUserInfo(item)"
+        >
           <th class="w-5 center">{{ index + 1 }}</th>
           <td class="w-15 left">{{ item.user_name }}</td>
           <td class="w-15 left">{{ item.phone_number }}</td>
@@ -41,6 +45,12 @@ export default {
       });
       await apiGetAllUser(filter).then((response) => {
         this.listData = response.data;
+      });
+    },
+    viewUserInfo(item) {
+      this.$router.replace(this.$router.path);
+      this.$router.push(`/manageuser/${item.user_id}`, {
+        params: { id: item.user_id },
       });
     },
   },

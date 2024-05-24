@@ -232,12 +232,16 @@ export default {
       this.product.product_image_url = this.list_img_url.join(";");
       await apiUpdateProduct(this.product, this.selectCategory)
         .then(() => {
+          this.emitter.emit(
+            "openToastMessage",
+            "Cập nhật thông tin thành công"
+          );
           this.closeForm();
         })
         .catch(() => {
           this.emitter.emit(
             "openToastMessageError",
-            Resource.ErrorMessage.ErrorMessageAdd
+            "Cập nhật thông tin không thành công"
           );
         });
     },

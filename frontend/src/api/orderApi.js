@@ -1,6 +1,6 @@
 
 import axios from "axios";
-import Cookies from "js-cookie";
+import VueCookies from 'vue-cookies';
 /**
  * Tạo request() 
  */
@@ -10,7 +10,7 @@ const request = () => {
             baseURL: 'http://localhost:60708/api/Orders',
             timeout: 5000,
             headers: {
-                Authorization: "Bearer " + Cookies.get('token')
+                Authorization: "Bearer " + VueCookies.get('token')
             }
         }
     )
@@ -55,4 +55,8 @@ export const apiDeleteOrder = (id) => {
 
 export const apiAddStockOrder = (order, orderDetails) => {
     return request().post('AddStockOrder', { order, orderDetails })
+}
+
+export const apiDashboard = () => {
+    return request().post('Dashboard');
 }

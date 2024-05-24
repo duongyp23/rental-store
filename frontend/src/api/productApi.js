@@ -1,5 +1,6 @@
 
 import axios from "axios";
+import VueCookies from 'vue-cookies';
 /**
  * Tạo request() 
  */
@@ -9,14 +10,14 @@ const request = () => {
             baseURL: 'http://localhost:60708/api/Products',
             timeout: 5000,
             headers: {
-                Authorization: "Bearer "
+                Authorization: "Bearer " + VueCookies.get('token')
             }
         }
     )
 }
 
-export const apiGetPagingProduct = (filter, pageSize, pageNumber) => {
-    return request().post('Paging?pageSize=' + pageSize + '&pageNumber=' + pageNumber, filter)
+export const apiGetPagingProduct = (filter, pageSize, pageNumber, ListCategoryId) => {
+    return request().post('PagingProduct?pageSize=' + pageSize + '&pageNumber=' + pageNumber, { filters: filter,listCategoryId: ListCategoryId })
 }
 
 export const apiInsertProduct = (product, selectCategory) => {

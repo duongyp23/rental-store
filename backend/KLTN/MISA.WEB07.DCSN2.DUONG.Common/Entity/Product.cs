@@ -17,6 +17,15 @@ namespace KLTN.Common.Entity
         public decimal? rental_price_day { get; set; }
         public decimal? rental_price_week { get; set; }
         public decimal? rental_price_month { get; set; }
+        
+    }
 
+    [Table("view_product_stock")]
+    public class ProductStock : Product
+    {
+        public int? total_quantity { get; set; }
+        public int? quantity_rental { get; set; }
+        public int? quantity_sold { get; set; }
+        public int? quantity_remain { get; set; }
     }
 }

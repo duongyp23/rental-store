@@ -1,6 +1,6 @@
 
 import axios from "axios";
-import Cookies from "js-cookie";
+import VueCookies from 'vue-cookies';
 /**
  * Tạo request() 
  */
@@ -10,7 +10,7 @@ const request = () => {
             baseURL: 'http://localhost:60708/api/Users',
             timeout: 5000,
             headers: {
-                Authorization: "Bearer " + Cookies.get('token')
+                Authorization: "Bearer " + VueCookies.get('token')
             }
         }
     )

@@ -1,12 +1,12 @@
 ﻿using KLTN.BussinesLayer;
 using KLTN.Common.Entity;
 using KLTN.Common.Entity.DTO;
-using KLTN.Common.Enums;
 using KLTN.NTier.Base;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
-namespace MISA.WEB07.HCSN.DUONG.NTier
+namespace KLTN.NTier
 {
 
     public class UsersController : BasesController<User>
@@ -68,7 +68,7 @@ namespace MISA.WEB07.HCSN.DUONG.NTier
                 return StatusCode(StatusCodes.Status400BadRequest, ex.Message);
             }
         }
-
+        [Authorize]
         [HttpGet("GetWaitOrder")]
         public async Task<IActionResult> GetWaitOrder(Guid userId)
         {

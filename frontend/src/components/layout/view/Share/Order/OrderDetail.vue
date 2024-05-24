@@ -399,7 +399,20 @@ export default {
   created() {
     this.loadData();
   },
-  mounted() {
+  async mounted() {
+    if (this.$route.query.apptransid) {
+      if (this.$route.query.status == 1) {
+        this.emitter.emit("openToastMessage", "Thanh toán đơn hàng thành công");
+        await this.loadData();
+        this.order.status = 3;
+        await apiUpdateOrderData(this.order, this.orderDetails);
+      } else {
+        this.emitter.emit(
+          "openToastMessageError",
+          "Thanh toán không thành công vui lòng kiểm tra lại đơn hàng"
+        );
+      }
+    }
     this.emitter.on("updateOrderData", (isSuccess) => {
       switch (this.order.status) {
         case 2:

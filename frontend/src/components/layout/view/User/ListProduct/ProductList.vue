@@ -1,6 +1,9 @@
 <template>
   <div class="dictionary-page">
-    <CategoryTable class="left-page" :show-button="true"></CategoryTable>
+    <CategoryTable
+      class="left-page"
+      v-model:selectCategory="selectCategory"
+    ></CategoryTable>
 
     <div class="product-list right-page">
       <div class="list-item mt-1">
@@ -30,7 +33,7 @@ export default {
       keyword: null, // từ cần lọc
       datalist: [], // danh sách tài sản
       pageNumber: 1,
-      isShowListCategory: true,
+      selectCategory: [],
     };
   },
   components: { StyleProduct, CategoryTable },
@@ -47,7 +50,8 @@ export default {
           operatorValue: "LIKE",
         });
       }
-      await apiGetPagingProduct(filter, 20, this.pageNumber)
+      let ListCategoryId = this.selectCategory.map((x) => x.category_id);
+      await apiGetPagingProduct(filter, 20, this.pageNumber, ListCategoryId)
         .then((response) => {
           this.datalist = response.data.data;
         })
@@ -92,6 +96,12 @@ export default {
      */
     keyword() {
       this.getProductData();
+    },
+    selectCategory: {
+      deep: true,
+      handler: async function () {
+        await this.getProductData();
+      },
     },
   },
 };

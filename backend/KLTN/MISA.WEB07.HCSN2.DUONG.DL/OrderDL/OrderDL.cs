@@ -5,11 +5,35 @@ using System.Reflection;
 using System.Text;
 using KLTN.Common.Entity;
 using MySqlConnector;
+using KLTN.Common.Entity.DTO;
+using System.Data;
 
 namespace KLTN.DataLayer
 {
     public class OrderDL : BaseDL<Order>, IOrderDL
     {
+        public async Task<object> GetDashboardData()
+        {
+            string query1 = "SELECT SUM(o.total_order_deposit) FROM orders o WHERE o.order_type = 1 AND o.status IN (3, 4, 5);";
+            string query2 = "SELECT SUM(o.total_order_payment) FROM orders o WHERE o.order_type = 1 AND o.status IN (3, 4, 5);";
+            string query3 = "SELECT SUM(o.total_order_return) FROM orders o WHERE o.order_type = 2; ";
+            string query4 = "SELECT SUM(o.total_order_payment) FROM orders o WHERE o.order_type = 3;";
+            var mySqlConnection = new MySqlConnection(CONNECTION_STRING);
+            var total1 = await mySqlConnection.QueryAsync<int>(query1);
+            var total2 = await mySqlConnection.QueryAsync<int>(query2);
+            var total3 = await mySqlConnection.QueryAsync<int>(query3);
+            var total4  = await mySqlConnection.QueryAsync<int>(query4);
+            mySqlConnection.Close();
+
+            return new 
+            {
+                TotalPrice = (int)total1.First(),
+                TotalProfit = (int)total2.First(),
+                TotalInward = (int)total3.First(),
+                TotalOutward = (int)total4.First(),
+            };
+        }
+
         public async Task<List<Product>> GetProductInOrder(Guid id)
         {
             var param = new DynamicParameters();

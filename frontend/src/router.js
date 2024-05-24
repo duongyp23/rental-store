@@ -15,6 +15,7 @@ import ProductForm from './components/layout/view/Admin/ManageProduct/ProductFor
 import StockOrderDetail from './components/layout/view/Admin/ManageStock/StockOrderDetail.vue';
 import ProductList from './components/layout/view/User/ListProduct/ProductList.vue';
 import ProductView from './components/layout/view/User/ListProduct/ProductView.vue';
+import ManageUserInfomation from './components/layout/view/Admin/ManageUser/UserInfomation.vue';
 
 const routes = [
     {
@@ -86,6 +87,11 @@ const routes = [
     {
         path: '/manageuser',
         component: ManageUser
+    },
+    
+    {
+        path: '/manageuser/:id',
+        component: ManageUserInfomation
     },
     {
         path: '/managestock',

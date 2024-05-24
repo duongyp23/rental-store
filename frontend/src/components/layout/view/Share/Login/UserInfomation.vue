@@ -48,24 +48,28 @@
       <table class="table">
         <thead>
           <tr>
-            <th>Ngày đặt hàng</th>
-            <th>Ngày bắt đầu thuê</th>
-            <th>Ngày kết thúc thuê</th>
-            <th>Tổng tiền đơn hàng</th>
-            <th>Trạng thái đơn hàng</th>
+            <th class="w-5 center">STT</th>
+            <th class="w-15 center">Ngày đặt hàng</th>
+            <th class="w-15 center">Ngày bắt đầu thuê</th>
+            <th class="w-15 center">Ngày kết thúc thuê</th>
+            <th class="w-20 right">Tổng tiền đơn hàng</th>
+            <th class="w-30 center">Trạng thái đơn hàng</th>
           </tr>
         </thead>
         <tbody>
           <tr
-            v-for="item in listOrder"
+            v-for="(item, index) in listOrder"
             :key="item.order_id"
             @dblclick="viewOrder(item.order_id)"
           >
-            <td>{{ datetimeToDate(item.order_date) }}</td>
-            <td>{{ datetimeToDate(item.from_date) }}</td>
-            <td>{{ datetimeToDate(item.to_date) }}</td>
-            <td>{{ replaceNumber(item.total_order_deposit) }}</td>
-            <td>{{ checkStatusOrder(item.status) }}</td>
+            <td class="w-5 center">{{ index + 1 }}</td>
+            <td class="w-15 center">{{ datetimeToDate(item.order_date) }}</td>
+            <td class="w-15 center">{{ datetimeToDate(item.from_date) }}</td>
+            <td class="w-15 center">{{ datetimeToDate(item.to_date) }}</td>
+            <td class="w-20 right">
+              {{ replaceNumber(item.total_order_deposit) }}
+            </td>
+            <td class="w-30 center">{{ checkStatusOrder(item.status) }}</td>
           </tr>
         </tbody>
       </table>

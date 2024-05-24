@@ -1,4 +1,4 @@
-﻿namespace MISA.WEB07.DCSN2.DUONG.Common
+﻿namespace KLTN.Common
 {
     public class Class1
     {

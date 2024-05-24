@@ -114,7 +114,11 @@ export default {
     replaceNumber,
     async addToCart() {
       if (this.$cookies.get("token")) {
-        if (this.selectOption != {} && this.numberRental > 0) {
+        if (
+          this.selectOption != {} &&
+          this.numberRental > 0 &&
+          this.numberRental <= this.selectOption.quantity_remain
+        ) {
           await apiAddProductToCart(
             this.product.product_id,
             this.$cookies.get("userId"),
@@ -129,6 +133,11 @@ export default {
               this.closeForm();
             })
             .catch(() => {});
+        } else {
+          this.emitter.emit(
+            "openToastMessageError",
+            "Vui lòng chọn lại sản phẩm thêm vào giỏ hàng"
+          );
         }
       } else {
         this.emitter.emit(

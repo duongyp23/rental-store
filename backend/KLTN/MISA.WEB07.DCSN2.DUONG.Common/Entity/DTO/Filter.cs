@@ -1,9 +1,8 @@
 ﻿namespace KLTN.Common.Entity.DTO
 {
-    public class Filter
+    public class ParamPaging
     {
-        public string columnName { get; set; }
-        public object filterValue { get; set; }
-        public string operatorValue { get; set; }
+        public List<Filter>? filters { get; set; }
+        public List< Guid >? listCategoryId {  get; set; }
     }
 }
